@@ -1,21 +1,21 @@
 import random
 
 print("Witaj w grze zgadywania liczby!")
-x = random.randint(1, 100)  # Komputer losuje raz na początku
+x = random.randint(1, 100)  
 b = 0  # Licznik prób
 
 while True:
   wejscie = input("Podaj liczbę: ")
 
-  # Sprawdzamy, czy użytkownik wpisał cyfry
+  
   if wejscie.isdigit():
     a = int(wejscie)
-    b += 1  # Zwiększamy licznik prób przy każdym wpisaniu
+    b += 1  
   else:
     print("To nie jest liczba. Spróbuj ponownie.")
-    continue  # Wraca do początku pętli i pyta ponownie
+    continue  
 
-  # Sprawdzamy warunki gry
+  
   if a < x:
     print("Twoja liczba jest mniejsza od wylosowanej.")
     print("Liczba prób: ", b)
@@ -25,6 +25,6 @@ while True:
   else:
     print("Gratulacje! Zgadłeś liczbę.")
     print("Liczba prób: ", b)
-    break  # Przerywamy pętlę, bo gra skończona!
+    break  
 
 
